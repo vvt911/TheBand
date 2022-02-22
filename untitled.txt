@@ -1,0 +1,10 @@
+1.Phân tích
+- header
+- slider
+- content
+   + about
+   + tour
+   + contact
+   + image
+- footer
+2.Dựng base (xây dựng móng)

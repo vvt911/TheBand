@@ -1,0 +1,31 @@
+#slider {
+    position: relative;
+    margin-top: 46.5px;
+    padding-top: 50%;
+    background: url(/WebTheBand/assets/img/slider/chicago.jpg) top center / cover no-repeat;
+    
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 36px;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 100%; */
+    /* right: 0;
+    left: 0; */
+    text-align: center;
+    
+}
+#slider .text-heading {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 10px 0;
+    
+}
+#slider .text-description {
+    font-weight: 500;
+    font-size: 15px;
+    margin: 15px 0;
+}
