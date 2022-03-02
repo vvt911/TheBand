@@ -1,6 +1,26 @@
 /* The Band */
-#content {
+/* #content {
 
+} */
+
+.row {
+    margin: 0 -8px;
+}
+.col {
+    float: left;
+    padding: 0 8px;
+}
+.col-half {
+    width: 50%;
+}
+.col-third {
+    width: calc(100% / 3);
+}
+.text-center {
+    text-align: center;
+}
+.col-full {
+    width: 100%;
 }
 
 #content .content-section {
@@ -36,11 +56,6 @@
 #content .members {
     padding: 32px 0;
     overflow: hidden;
-}
-#content .member-item {
-    float: left;
-    text-align: center;
-    width: calc(100% / 3);
 }
 #content .member-name {
     font-size: 15px;
@@ -95,15 +110,9 @@
 .places-list {
     font-size: 15px;
     font-family: 'Lato', sans-serif;
-    margin: 0 -16px;
     padding: 32px 8px;
     overflow: hidden;
-}
-.place {
-    float: left;
-    width: calc(100%/3);
-    padding: 0 8px;
-    margin-bottom: 16px;
+    margin: 0 -16px;
 }
 .place-img:hover {
     opacity: 0.6;
@@ -128,9 +137,11 @@
 .tour-discription {
     margin: 15px 0;
 }
+.contact-form .submit-btn:hover,
 .place-buytickets:hover {
     color: #000;
     background-color: #ccc;
+    cursor: pointer;
 }
 .place-buytickets {
     text-decoration: none;
@@ -138,4 +149,51 @@
     color: #fff;
     padding: 10px 16px;
     display: inline-block ;
+    border: none;
+}
+
+
+/* contact */
+.contact-content {
+    padding: 32px 0;
+    overflow: hidden;
+}
+.contact-info {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.contact-info p i {
+    width: 30px;
+    display: inline-block;
+}
+.contact-form {
+    font-size: 15px;
+}
+.contact-form .row {
+    overflow: hidden;
+}
+.mt-8 {
+    margin-top: 8px;
+}
+.mt-16 {
+    margin-top: 16px;
+}
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.contact-form .submit-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    padding: 11px 16px;
+    float: right;
+    text-transform: uppercase;
+}
+
+
+.map-section img {
+    width: 100%;
 }
