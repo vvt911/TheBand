@@ -6,7 +6,8 @@
 }
 
 html {
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
 }
 /* Nguyên tắc:
 1. Từ ngoài vào trong
