@@ -17,7 +17,7 @@
     /* right: 0;
     left: 0; */
     text-align: center;
-    
+    text-shadow: 0 0 2px #000;
 }
 #slider .text-heading {
     font-weight: 600;
