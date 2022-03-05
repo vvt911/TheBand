@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="./assets/css/content.css" />
         <link rel="stylesheet" href="./assets/css/footer.css" />
         <link rel="stylesheet" href="./assets/css/modal.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css">
         <link rel="stylesheet" href="assets/fonts/themify-icons/themify-icons.css">
     </head>
 
@@ -42,6 +43,9 @@
                 <div class="search-icon">
                     <i class="icon ti-search"></i>
                 </div>
+                <div id="mobile-menu" class="mobile-menu-btn">
+                    <i class="menu-icon ti-menu"></i>
+                </div>
                 <!-- End: Search icon -->
             </div>
 
@@ -62,15 +66,15 @@
                     </p>
 
                     <div class="row members">
-                        <div class="col col-third text-center">
+                        <div class="member-item col col-third text-center">
                             <p class="member-name">Name</p>
                             <img src="./assets/img/team/bandmember.jpg" alt="Name" class="member-img">
                         </div>
-                        <div class="col col-third text-center">
+                        <div class="member-item col col-third text-center">
                             <p class="member-name">Name</p>
                             <img src="./assets/img/team/bandmember.jpg" alt="Name" class="member-img">
                         </div>
-                        <div class="col col-third text-center">
+                        <div class="member-item col col-third text-center">
                             <p class="member-name">Name</p>
                             <img src="./assets/img/team/bandmember.jpg" alt="Name" class="member-img">
                         </div>
@@ -92,7 +96,7 @@
 
                         <!-- Places -->
                         <div class="row places-list">
-                            <div class="col col-third">
+                            <div class="col col-third s-col-full tour-item">
                                 <img src="./assets/img/places/newyork.jpg" alt="New York" class="place-img">
                                 <div class="tour-information">
                                     <p class="place-name">New York</p>
@@ -104,7 +108,7 @@
                                 </div>
                             </div>
 
-                            <div class="col col-third">
+                            <div class="col col-third s-col-full tour-item">
                                 <img src="./assets/img/places/paris.jpg" alt="Paris" class="place-img">
                                 <div class="tour-information">
                                     <p class="place-name">Paris</p>
@@ -116,7 +120,7 @@
                                 </div>
                             </div>
 
-                            <div class="col col-third">
+                            <div class="col col-third s-col-full tour-item">
                                 <img src="./assets/img/places/sanfran.jpg" alt="San Francisco" class="place-img">
                                 <div class="tour-information">
                                     <p class="place-name">San Francisco</p>
@@ -138,7 +142,7 @@
                     <p class="section-sub_heading">Fan? Drop a note!</p>
 
                     <div class="row contact-content">
-                        <div class="col col-half contact-info">
+                        <div class="col col-half s-col-full contact-info">
                             <p>
                                 <i class="ti-location-pin"></i>
                                 Chicago, US
@@ -153,13 +157,13 @@
                             </p>
                         </div>
 
-                        <div class="col col-half contact-form">
+                        <div class="col col-half s-col-full contact-form">
                             <form action="">
                                 <div class="row">
-                                    <div class="col col-half">
+                                    <div class="col col-half s-col-full">
                                         <input type="text" placeholder="Name" class="form-control" required>
                                     </div>
-                                    <div class="col col-half">
+                                    <div class="col col-half s-col-full">
                                         <input type="email" placeholder="Email" class="form-control" required>
                                     </div>
                                 </div>
@@ -182,37 +186,37 @@
 
             <div id="footer">
                 <div class="social-list">
-                    <a href="">
+                    <a href="#">
                         <div class="icon-container">
                             <i class="ti-icon ti-facebook"></i>
                             <i class="ti-icon ti-facebook"></i>
                         </div>
                     </a>
-                    <a href="">
+                    <a href="#">
                         <div class="icon-container">
                             <i class="ti-icon ti-instagram"></i>
                             <i class="ti-icon ti-instagram"></i>
                         </div>
                     </a>
-                    <a href="">
+                    <a href="#">
                         <div class="icon-container">
                             <i class="ti-icon ti-youtube"></i>
                             <i class="ti-icon ti-youtube"></i>
                         </div>
                     </a>
-                    <a href="">
+                    <a href="#">
                         <div class="icon-container">
                             <i class="ti-icon ti-pinterest"></i>
                             <i class="ti-icon ti-pinterest"></i>
                         </div>
                     </a>
-                    <a href="">
+                    <a href="#">
                         <div class="icon-container">
                             <i class="ti-icon ti-twitter"></i>
                             <i class="ti-icon ti-twitter"></i>
                         </div>
                     </a>
-                    <a href="">
+                    <a href="#">
                         <div class="icon-container">
                             <i class="ti-icon ti-linkedin"></i>
                             <i class="ti-icon ti-linkedin"></i>
@@ -291,6 +295,40 @@
             modalContainer.addEventListener('click', function (event) {
                 event.stopPropagation()
             })
+        </script>
+
+        
+        <script>
+            var header = document.getElementById('header');
+            var mobileMenu = document.getElementById('mobile-menu');
+            var headerHeight = header.clientHeight;
+
+            // đóng mở mobile menu
+            mobileMenu.onclick = function() {
+                var isClosed = header.clientHeight === headerHeight;
+                if (isClosed) {
+                    header.style.height = 'auto';
+                }
+                else {
+                    header.style.height = null;
+                }
+            }
+
+            // tự động đóng menu khi chọn
+            var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+            for (var i = 0; i < menuItems.length; i++) {
+                var menuItem = menuItems[i];
+
+                menuItem.onclick = function(event) {
+                    var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('sub_nav');
+                    if (isParentMenu) {
+                        event.preventDefault();
+                    }
+                    else {
+                        header.style.height = null; 
+                    }
+                }   
+            }
         </script>
     </body>
 

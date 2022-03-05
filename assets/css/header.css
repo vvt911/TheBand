@@ -84,18 +84,34 @@ html {
 #nav .nav-arrow-down {
     font-size: 12px;
 }
-
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+#header .mobile-menu-btn,
 #header .search-icon{
     float: right;
     padding: 0 21px;
     cursor: pointer;
 }
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
 #header .search-icon:hover {
     background-color: red;
 }
+
+#header .menu-icon,
 #header .icon {
     color: #fff;
     font-size: 20px;
     line-height: 46.5px;
 }
+
+
 

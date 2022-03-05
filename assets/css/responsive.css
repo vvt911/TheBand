@@ -1,0 +1,79 @@
+/* Tablet & Moblie */
+@media (max-width: 1023px) {
+    .place-buytickets {
+        padding: 15px 16px;
+    }
+    .contact-form .form-control {
+        padding: 15px;
+    }
+    .social-list .ti-icon{
+        font-size: 48px;
+    }
+    #footer .icon-container{
+        width: 48px;
+        height: 58px;
+        overflow: hidden;
+        display: inline-block;
+    }
+    #footer .ti-icon {
+        padding: 10px 0 2px 0;
+        display: block;
+        transition: transform .5s ease-in-out;
+    }
+    #footer .icon-container:hover .ti-icon {
+        transform: translate3d(0px, 58px, 0px);
+    }
+    #footer .copyright a {
+        padding: 15px 0;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 740px) {
+    #header {
+        overflow: hidden;
+    }
+    #header .search-icon {
+        display: none;
+    }
+    #header .mobile-menu-btn{
+        display: block;
+    }
+    #nav {
+        display: block;
+    }
+    #nav > li {
+        display: block;
+    }
+    #nav > li:first-child {
+        display: inline-block;
+    }
+    #nav .sub_nav {
+        position: initial;
+        background-color: #333;
+    }
+    #nav .sub_nav a {
+        color: #fff;
+        padding: 5px 38px;
+    }
+
+    #content .member-item {
+        margin-top: 30px;
+        width: 100%;
+    } 
+    #content .member-img {
+        width: 60%;
+    }
+    .s-col-full {
+        width: 100%;
+        margin-top: 8px;
+    }
+    .submit-btn {
+        width: 100%;
+    }
+    .place-buytickets {
+        width: 100%;
+        text-align: center;
+    }
+}

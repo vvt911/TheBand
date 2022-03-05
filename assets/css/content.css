@@ -25,9 +25,12 @@
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 0;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 #content .content-section .section-heading{
     font-family: "Segoe UI",Arial,sans-serif;
@@ -197,3 +200,4 @@
 .map-section img {
     width: 100%;
 }
+
