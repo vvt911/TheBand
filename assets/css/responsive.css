@@ -1,6 +1,7 @@
 /* Tablet & Moblie */
 @media (max-width: 1023px) {
-    .place-buytickets {
+    .place-buytickets,
+    .submit-btn {
         padding: 15px 16px;
     }
     .contact-form .form-control {
@@ -21,10 +22,13 @@
         transition: transform .5s ease-in-out;
     }
     #footer .icon-container:hover .ti-icon {
-        transform: translate3d(0px, 58px, 0px);
+        transform: translate3d(0px, -59px, 0px);
     }
     #footer .copyright a {
         padding: 15px 0;
+    }
+    .contact-info {
+        line-height: 2.0;
     }
 }
 
